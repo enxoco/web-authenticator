@@ -96,6 +96,7 @@ fieldset {
   flex: 1;
   font-weight: bold;
   border: none;
+  min-width: 200px;
 }
 
 label {
