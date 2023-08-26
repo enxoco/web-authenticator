@@ -1,11 +1,8 @@
 import "./style.css";
 
-import {setupTokenList} from './tokens'
+import { tokenList } from "./tokenList";
 document.querySelector<HTMLDivElement>("#app")!.innerHTML = `
-  <div>
-    <form id="tokens">
-    </form>
-  </div>
+  ${tokenList()}
 `;
 
-setupTokenList(document.querySelector<HTMLDivElement>("#tokens")!);
+// setupTokenList(document.querySelector<HTMLDivElement>("#tokens")!);
