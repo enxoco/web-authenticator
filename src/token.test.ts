@@ -1,6 +1,6 @@
 // @vitest-environment jsdom
 
-import { assert, expect, test } from 'vitest'
+import { expect, test } from 'vitest'
 import {displayToken} from './token'
 
 test('a 6 digit token is displayed', () => {

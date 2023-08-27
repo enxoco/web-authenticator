@@ -17,16 +17,15 @@ export function displayTokenListItem(
     secondsSinceStart = 0 + (secondsSinceEpoch % period);
     secondsRemaining = period - (secondsSinceEpoch % period);
     const timerDiv = document.getElementById(`timer-${account}`);
-    const tokenDiv = document.getElementById(`secret-${account}`)
+    const tokenDiv = document.getElementById(`secret-${account}`);
     if (timerDiv && tokenDiv) {
       timerDiv.innerHTML = secondsRemaining.toString();
       timerDiv.style.background = `conic-gradient(transparent ${
         (100 / 30) * secondsSinceStart
       }%, ${secondsRemaining < 10 ? "salmon" : "gainsboro"} 0)`;
-      token = displayToken(secret)
+      token = displayToken(secret);
       tokenDiv.innerHTML = token;
     }
-
   }
   setInterval(() => {
     countdown();
