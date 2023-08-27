@@ -4,7 +4,12 @@ import { tokens } from "./tokens";
 export function tokenList() {
   const element = document.createElement("div");
   element.classList.add("test");
-  return `<form id="tokens">${tokens.map((token) =>
-    displayTokenListItem(token.account, token.secret, element)
-  )}</form>`;
+  const div = document.createElement('div')
+  div.append('<form id="tokens">')
+  document.querySelector<HTMLDivElement>("#app")!.innerHTML += '<form id="tokens">'
+  tokens.map(async (token) => {
+    const el = await displayTokenListItem(token.account, token.secret, element)
+    document.querySelector<HTMLDivElement>("#app")!.innerHTML += el
+  })
+
 }
