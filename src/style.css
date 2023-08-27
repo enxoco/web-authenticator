@@ -102,14 +102,3 @@ fieldset {
 label {
   font-weight: 300;
 }
-.timer {
-  position: absolute;
-  width: 24px;
-  height: 24px;
-  border-radius: 24px;
-  padding: 8px 10px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  
-}
