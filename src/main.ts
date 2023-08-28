@@ -1,6 +1,8 @@
 import "./style.css";
 
 import { tokenList } from "./tokenList";
-document.querySelector<HTMLDivElement>("#app")!.innerHTML = `
+import rootDiv from "./utils/root";
+
+rootDiv!.innerHTML = `
   ${tokenList()}
 `;
