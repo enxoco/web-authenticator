@@ -41,6 +41,10 @@ h1 {
   margin: 0 auto;
   padding: 2rem;
   text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column-reverse;
 }
 
 .card {
@@ -81,14 +85,16 @@ button:focus-visible {
 .fieldset-wrapper, form {
   display: flex;
   flex: 1;
+
 }
 form {
   flex-direction: column;
 }
 .fieldset-wrapper {
-  border: 1px solid;
+  border: 1px solid gainsboro;
   padding: 5px;
-  border-bottom: 1px solid;
+  border-radius: 4px;
+  box-shadow: 1px 0px 6px 2px gainsboro;
 }
 
 fieldset {
@@ -111,4 +117,15 @@ label {
   display: flex;
   justify-content: center;
   align-items: center;
+  border: 1px solid;
+}
+
+.toast {
+  background-color: lightseagreen;
+  padding: 10px;
+  position: relative;
+  top: 10px;
+  right: 10px;
+  color: white;
+  font-weight: bold;
 }
