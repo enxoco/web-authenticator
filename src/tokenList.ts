@@ -1,4 +1,4 @@
-import { displayTokenListItem } from "./TokenListItem";
+import { displayTokenListItem } from "./tokenListItem";
 import { tokens } from "./tokens";
 
 export function tokenList() {
