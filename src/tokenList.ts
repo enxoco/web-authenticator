@@ -1,9 +1,9 @@
 import { displayTokenListItem } from "./tokenListItem";
-import { Token, decryptTokensWithAkeyless } from "./utils/api";
-
+import { tokens } from "./tokens";
+import { Token } from "./utils/types";
+console.log('tokens', tokens)
 export async function tokenList() {
-  const decryptedTokens = (await decryptTokensWithAkeyless(import.meta.env.VITE_AKEYLESS_KEY_PATH))
-  return `<form id="tokens">${decryptedTokens.map((token: Token) =>
+  return `<form id="tokens">${tokens.map((token: Token) =>
     displayTokenListItem(token.account, token.secret)
   )}</form>`;
 }
